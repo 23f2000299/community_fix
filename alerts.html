@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disaster Alerts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-600">Community Platform</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="text-gray-700 hover:text-blue-500">Feed</a>
+        <a href="map.html" class="text-gray-700 hover:text-blue-500">Map</a>
+        <a href="volunteers.html" class="text-gray-700 hover:text-blue-500">Volunteers</a>
+        <a href="alerts.html" class="text-blue-600 font-semibold">Alerts</a>
+        <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Alerts Section -->
+  <main class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold mb-6">🚨 Emergency & Disaster Alerts</h2>
+
+    <!-- Alert Cards -->
+    <div class="space-y-6">
+
+      <!-- Example Alert 1 -->
+      <div class="bg-red-100 border-l-4 border-red-500 p-5 rounded-lg shadow">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-lg font-bold text-red-700">🔥 Fire Alert near Admin Block</h3>
+            <p class="text-sm text-gray-700 mt-1">
+              A minor fire has broken out near the Admin Block. Avoid the area and follow fire safety protocols.
+            </p>
+          </div>
+          <span class="text-sm text-red-600">5 mins ago</span>
+        </div>
+      </div>
+
+      <!-- Example Alert 2 -->
+      <div class="bg-yellow-100 border-l-4 border-yellow-500 p-5 rounded-lg shadow">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-lg font-bold text-yellow-700">⚠️ Heavy Rain Forecast</h3>
+            <p class="text-sm text-gray-700 mt-1">
+              IMD has issued a yellow alert for heavy rains today. Campus transport may be delayed.
+            </p>
+          </div>
+          <span class="text-sm text-yellow-600">30 mins ago</span>
+        </div>
+      </div>
+
+      <!-- Example Alert 3 -->
+      <div class="bg-blue-100 border-l-4 border-blue-500 p-5 rounded-lg shadow">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="text-lg font-bold text-blue-700">🧭 Safe Shelter Activated</h3>
+            <p class="text-sm text-gray-700 mt-1">
+              Shelter Room B3 (Library Basement) is now open for anyone needing a safe space during the storm.
+            </p>
+          </div>
+          <span class="text-sm text-blue-600">1 hour ago</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Offer Help Section -->
+    <div class="mt-10">
+      <h3 class="text-xl font-semibold mb-4">🙋‍♂️ Offer Help to Affected People</h3>
+      <form class="bg-white p-6 rounded-lg shadow space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded p-2" required />
+        <input type="text" placeholder="Your Phone or Email" class="w-full border border-gray-300 rounded p-2" required />
+        <textarea rows="3" placeholder="How can you help? e.g. transport, food, shelter..." class="w-full border border-gray-300 rounded p-2" required></textarea>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+          Submit Help Offer
+        </button>
+      </form>
+    </div>
+
+  </main>
+
+</body>
+</html>
