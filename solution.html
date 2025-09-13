@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propose a Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="p-6 max-w-2xl mx-auto bg-white rounded shadow space-y-4">
+    <h2 class="text-xl font-semibold">💡 Propose a Solution</h2>
+    <input type="text" placeholder="Brief, descriptive title for your solution" class="w-full border p-2 rounded" />
+    <textarea placeholder="Explain your solution approach and why it would work" class="w-full border p-2 rounded" rows="3"></textarea>
+    <div class="grid grid-cols-2 gap-4">
+      <select class="border p-2 rounded">
+        <option>Select difficulty</option>
+        <option>Easy</option>
+        <option>Moderate</option>
+        <option>Hard</option>
+      </select>
+      <input type="text" placeholder="e.g., 2 hours, 1 day" class="border p-2 rounded" />
+    </div>
+    <input type="text" placeholder="Add a required resource" class="w-full border p-2 rounded" />
+    <input type="text" placeholder="Add an implementation step" class="w-full border p-2 rounded" />
+    <div class="flex justify-between mt-4">
+      <button class="px-4 py-2 border rounded">Cancel</button>
+      <button class="px-4 py-2 bg-green-600 text-white rounded">Submit Solution</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report a Problem</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="p-6 max-w-xl mx-auto bg-white rounded shadow space-y-4">
+    <div class="flex items-center justify-between">
+      <h2 class="text-xl font-semibold">🚨 Report a Problem</h2>
+      <label class="flex items-center gap-2 cursor-pointer">
+        <span class="text-sm text-red-600 font-medium">Emergency/Disaster Report</span>
+        <input type="checkbox" class="toggle toggle-error" />
+      </label>
+    </div>
+    <input type="text" placeholder="Brief description of the issue" class="w-full border p-2 rounded" />
+    <textarea placeholder="Provide more details about the problem" class="w-full border p-2 rounded" rows="3"></textarea>
+    <div class="grid grid-cols-2 gap-4">
+      <select class="border p-2 rounded">
+        <option>Select category</option>
+        <option>Infrastructure</option>
+        <option>Safety</option>
+        <option>Technology</option>
+      </select>
+      <select class="border p-2 rounded">
+        <option>Select priority</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>Urgent</option>
+      </select>
+    </div>
+    <input type="text" placeholder="Where is this problem located?" class="w-full border p-2 rounded" />
+    <div class="flex items-center gap-2">
+      <label class="text-sm font-medium">Add Photo</label>
+      <input type="file" class="block border rounded text-sm" />
+    </div>
+    <div class="flex justify-between mt-4">
+      <button class="px-4 py-2 border rounded">Cancel</button>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded">Submit Report</button>
+    </div>
+  </div>
+</body>
+</html>

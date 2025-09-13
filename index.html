@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ showModal: false }" x-cloak>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Problem Platform</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-600">Community Platform</h1>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="map.html" class="text-gray-700 hover:text-blue-500">Map View</a>
+        <a href="alerts.html" class="text-gray-700 hover:text-blue-500">Alerts</a>
+        <a href="profile.html" class="text-gray-700 hover:text-blue-500">Profile</a>
+        <a href="volunteers.html" class="text-gray-700 hover:text-blue-500">Volunteers</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-semibold">Reported Problems</h2>
+      <button 
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        @click="showModal = true"
+      >
+        + Report a Problem
+      </button>
+    </div>
+
+    <!-- Problem Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Card 1 -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="library.jpg" alt="Library" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Broken WiFi in Library Study Room 3</h3>
+          <p class="text-sm text-gray-600 mb-2">Main Library, Room 3 • <span class="text-red-600 font-semibold">High Priority</span></p>
+          <p class="text-gray-700 text-sm mb-4">The WiFi has been down for 3 days. Students can’t access online resources for studying.</p>
+          <div class="flex items-center justify-between text-sm text-gray-600">
+            <span>👤 Sarah Chen (Student)</span>
+            <span>🕒 2 hours ago</span>
+          </div>
+          <div class="flex space-x-4 mt-3 text-sm text-gray-600">
+            <span>❤️ 24</span>
+            <span>💬 8</span>
+            <span>🛠️ 3 Solutions</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white shadow rounded-lg overflow-hidden">
+        <img src="pothole.jpeg" alt="Pothole" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Pothole on Campus Drive</h3>
+          <p class="text-sm text-gray-600 mb-2">Campus Main Road • <span class="text-yellow-500 font-semibold">Medium Priority</span></p>
+          <p class="text-gray-700 text-sm mb-4">A large pothole near the parking entrance is causing traffic congestion and bike accidents.</p>
+          <div class="flex items-center justify-between text-sm text-gray-600">
+            <span>👤 Rahul Mehta (Faculty)</span>
+            <span>🕒 5 hours ago</span>
+          </div>
+          <div class="flex space-x-4 mt-3 text-sm text-gray-600">
+            <span>❤️ 15</span>
+            <span>💬 3</span>
+            <span>🛠️ 1 Solution</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Report Modal -->
+  <div 
+    x-show="showModal"
+    x-transition
+    class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+  >
+    <div class="bg-white p-6 rounded-lg shadow-lg w-11/12 md:w-1/2 relative">
+      <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-xl" @click="showModal = false">×</button>
+      <h2 class="text-xl font-bold mb-4">Report a Problem</h2>
+      <form class="space-y-3">
+        <input type="text" placeholder="Title" class="w-full border border-gray-300 rounded p-2" required>
+        <textarea placeholder="Description" class="w-full border border-gray-300 rounded p-2" rows="3" required></textarea>
+        <input type="text" placeholder="Location" class="w-full border border-gray-300 rounded p-2" required>
+        <select class="w-full border border-gray-300 rounded p-2">
+          <option value="high">High Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="low">Low Priority</option>
+        </select>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
